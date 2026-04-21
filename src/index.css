@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --vibrant-bg: #0f172a;
+  --vibrant-card: #1e293b;
+  --vibrant-border: #334155;
+  --vibrant-accent-primary: #4ade80;
+  --vibrant-accent-secondary: #f472b6;
+  --vibrant-cyan: #22d3ee;
+  --vibrant-indigo: #818cf8;
+}
+
+body {
+  background-color: var(--vibrant-bg);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .vibrant-glass {
+    background: var(--vibrant-card);
+    border: 2px solid var(--vibrant-border);
+  }
+  .vibrant-gradient {
+    background: linear-gradient(135deg, var(--vibrant-cyan), var(--vibrant-indigo));
+  }
+  .minecraft-gradient {
+    background: linear-gradient(to bottom right, #34d399, #059669);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vibrant-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vibrant-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vibrant-accent-secondary);
+}
